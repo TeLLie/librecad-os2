@@ -8,6 +8,7 @@ QT       += gui
 TEMPLATE = lib
 CONFIG += plugin
 VERSION = 1.0.0
+os2:TARGET_SHORT = ascifile
 TARGET = $$qtLibraryTarget(asciifile)
 
 GENERATED_DIR = ../../generated/plugin/asciifile
@@ -21,6 +22,10 @@ SOURCES += asciifile.cpp
 HEADERS += asciifile.h
 
 # Installation Directory
+os2 {
+        DESTDIR = ../../os2/resources/plugins
+}
+
 win32 {
         DESTDIR = ../../windows/resources/plugins
 }

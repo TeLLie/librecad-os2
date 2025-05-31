@@ -33,7 +33,7 @@ CONFIG += c++17
 }
 
 GEN_LIB_DIR = ../../generated/lib
-msvc {
+msvc|os2 {
 	PRE_TARGETDEPS += $$GEN_LIB_DIR/dxfrw.lib \
 			$$GEN_LIB_DIR/jwwlib.lib
 } else {
@@ -43,6 +43,9 @@ msvc {
 
 DESTDIR = $${INSTALLDIR}
 
+os2 {
+    TARGET = librecad
+}
 # Make translations at the end of the process
 unix {
     LC_VERSION=$$system([ "$(which git)x" != "x" -a -d ../../.git ] && echo "$(git describe)" || echo "$${LC_VERSION}")

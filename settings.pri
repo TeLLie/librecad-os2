@@ -1,3 +1,6 @@
+os2 {
+        INSTALLDIR = ../../os2
+}
 
 unix {
     macx {

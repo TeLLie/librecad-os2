@@ -22,6 +22,10 @@ SOURCES += sameprop.cpp
 HEADERS += sameprop.h
 
 # Installation Directory
+os2 {
+        DESTDIR = ../../os2/resources/plugins
+}
+
 win32 {
         DESTDIR = ../../windows/resources/plugins
 }

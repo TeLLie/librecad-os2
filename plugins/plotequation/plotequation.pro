@@ -2,6 +2,7 @@ QT       += gui
 TEMPLATE = lib
 CONFIG += plugin
 VERSION = 1.0.1
+os2:TARGET_SHORT = plottion
 TARGET = $$qtLibraryTarget(plotequation)
 
 GENERATED_DIR = ../../generated/plugin/plotequation
@@ -22,6 +23,10 @@ HEADERS += \
     plot.h
 
 # Installation Directory
+os2 {
+        DESTDIR = ../../os2/resources/plugins
+}
+
 win32 {
         DESTDIR = ../../windows/resources/plugins
 }

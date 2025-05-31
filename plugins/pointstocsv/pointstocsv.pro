@@ -8,6 +8,7 @@ QT       += gui
 TEMPLATE = lib
 CONFIG += plugin
 VERSION = 1.0.1
+os2:TARGET_SHORT = poinocsv
 TARGET = $$qtLibraryTarget(pointstocsv)
 
 GENERATED_DIR = ../../generated/plugin/pointstocsv
@@ -22,6 +23,10 @@ SOURCES += pointstocsv.cpp
 HEADERS += pointstocsv.h
 
 # Installation Directory
+os2 {
+        DESTDIR = ../../os2/resources/plugins
+}
+
 win32 {
         DESTDIR = ../../windows/resources/plugins
 }

@@ -23,6 +23,10 @@ SOURCES += align.cpp
 HEADERS += align.h
 
 # Installation Directory
+os2 {
+        DESTDIR = ../../os2/resources/plugins
+}
+
 win32 {
         DESTDIR = ../../windows/resources/plugins
 }

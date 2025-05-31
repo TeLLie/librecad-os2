@@ -1,5 +1,5 @@
 
-macx|win32|equals(build_muparser, "true")|!packagesExist(muparser){
+macx|win32|os2|equals(build_muparser, "true")|!packagesExist(muparser){
     message("Using bundled muparser")
 	MUPARSER_DIR = ../../libraries/muparser
 	DEPENDPATH += $$MUPARSER_DIR/include \
@@ -7,7 +7,7 @@ macx|win32|equals(build_muparser, "true")|!packagesExist(muparser){
 	INCLUDEPATH += $$MUPARSER_DIR/include
 	GEN_LIB_DIR = ../../generated/lib
 	LIBS += -L$$GEN_LIB_DIR -lmuparser
-	msvc {
+	msvc|os2 {
 		PRE_TARGETDEPS += $$GEN_LIB_DIR/muparser.lib
 	} else {
 		PRE_TARGETDEPS += $$GEN_LIB_DIR/libmuparser.a
