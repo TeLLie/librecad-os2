@@ -17,6 +17,10 @@ DEFINES += VERSION="\"0.0.0.2\""
 GENERATED_DIR = ../../generated/tools/ttf2lff
 SOURCES += main.cpp
 
+os2 {
+        TARGET = ../../os2/ttf2lff
+}
+
 unix {
     macx {
         TARGET = ../../LibreCAD.app/Contents/MacOS/ttf2lff

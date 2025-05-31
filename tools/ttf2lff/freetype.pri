@@ -1,5 +1,5 @@
 
-unix {
+unix|os2 {
     CONFIG += link_pkgconfig
     PKGCONFIG += freetype2
 }
